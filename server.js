@@ -19,7 +19,7 @@ app.prepare().then(() => {
   });
 
   /* eslint-disable no-console */
-  server.listen(3000, (err) => {
+  server.listen(process.env.PORT, (err) => {
     if (err) throw err;
     console.log('Server listening at http://localhost:3000');
   });
