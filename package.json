@@ -1,20 +1,33 @@
 {
   "name": "next-social-network",
   "version": "1.0.0",
-  "description": "Next.js Social Network",
-  "main": "index.js",
+  "description": "Next Social Network",
+  "main": "server.js",
   "repository": "git@github.com:krokben/next-social-network.git",
   "author": "Tommy Svensson",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "next": "^6.0.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-semistandard": "^12.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-standard": "^3.1.0",
+    "nodemon": "^1.17.5"
   }
 }
