@@ -19,8 +19,9 @@ app.prepare().then(() => {
   });
 
   /* eslint-disable no-console */
-  server.listen(process.env.PORT, (err) => {
+  const port = process.env.PORT || 3000;
+  server.listen(port, (err) => {
     if (err) throw err;
-    console.log('Server listening at http://localhost:3000');
+    console.log(`Server listening on port ${port}...`);
   });
 });
